@@ -8,10 +8,10 @@ Connect to the master database:
 
 1. docker exec -it db-master mysql -u root -prootpassword
 2. Execute the following SQL commands:
-3. CREATE USER 'replicator'@'%' IDENTIFIED BY 'replicapassword';
-   GRANT REPLICATION SLAVE ON *.* TO 'replicator'@'%';
-   FLUSH PRIVILEGES;
-   SHOW MASTER STATUS;
+   1. CREATE USER 'replicator'@'%' IDENTIFIED BY 'replicapassword';
+   2. GRANT REPLICATION SLAVE ON *.* TO 'replicator'@'%';
+   3. FLUSH PRIVILEGES;
+   4. SHOW MASTER STATUS;
 
 Configure the Replica:
 1. docker exec -it db-replica mysql -u root -prootpassword
